@@ -1,0 +1,32 @@
+<div class="row"> 
+		<div class="col-md-4">
+		<%= image_tag @book.book_img.url(:book_show), class: "book-show" %>
+		</div>
+
+		<div class="col-md-8">
+		<h2><%= @book.title %></h2>
+		<h3><%= @book.author %></h3>
+		<p><%= @book.description %></p>
+		<p>Category: <%= @book.category.name %></p>
+		<%= link_to "Back", root_path %>
+		</div>
+
+</div>
+
+<div class="row"> 
+		<div class="col-md-4">
+
+		<!-- Where the review will go -->
+
+		</div>
+</div>	
+
+	<% if u_ser_signed_in? %>
+
+		<% if @book.u_ser_id == current_u_ser.id %>
+
+			<%= link_to "Edit", edit_book_path(@book) %>
+			<%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are your sure?" } %> 
+		<% end %>
+
+	<% end %>

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.book{	
+height: 350px;
+width: 250ox;
+padding: 10px;
+}
+
+.book-show {
+heigth: 200px;
+width: 150px; 
+}
