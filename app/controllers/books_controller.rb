@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
 	before_action :find_book, only: [:show, :update, :destroy, :edit]
+	before_action :authenticate_u_ser!, only: [:new, :edit]
 
 	def index
 	 	if params[:category].blank?

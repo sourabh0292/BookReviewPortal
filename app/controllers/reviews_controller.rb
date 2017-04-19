@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
 	before_action :find_book
 	before_action :find_reviews, only: [:edit, :update, :destroy]
+	before_action :authenticate_u_ser!, only: [:new, :edit]
 
 	def new
 		@review = Review.new
@@ -44,7 +45,7 @@ class ReviewsController < ApplicationController
 
 	def find_reviews
 	@review = Review.find(params[:id])
-	
+
 	end
 
 	private
