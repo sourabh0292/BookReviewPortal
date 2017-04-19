@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :u_sers
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-resources :books
+resources :books do
+	resources :reviews
+end
 root 'books#index'
 
 end
