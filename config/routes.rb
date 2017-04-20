@@ -7,4 +7,6 @@ resources :books do
 end
 root 'books#index'
 
+post 'books/search', to: 'books#search'
+
 end
