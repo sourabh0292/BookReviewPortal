@@ -35,10 +35,11 @@ ActiveRecord::Schema.define(version: 20170418130307) do
   create_table "reviews", force: :cascade do |t|
     t.integer  "rating"
     t.text     "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "u_ser_id"
+    t.float    "sentiment_score"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "book_id"
+    t.integer  "u_ser_id"
   end
 
   create_table "u_sers", force: :cascade do |t|
