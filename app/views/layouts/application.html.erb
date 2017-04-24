@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <title>BookReview</title>
@@ -43,11 +43,12 @@
 
    <% if u_ser_signed_in? %>
    <li><%= link_to "Add Book", new_book_path %> </li>
-   <%= form_for(Search.new, url: books_search_path, method: :post) do |f| %>
-    <%= f.text_field :search %>
-    <%= f.submit%>
-    <% end %>
-  
+    <li class="navbar-default" ><%= current_u_ser.email %></li>
+      <%= form_for(Search.new, url: books_search_path, method: :post) do |f| %>
+      <%= f.text_field :search %>
+      <%= f.submit%>
+      <% end %>
+      
   <% end %>
    </ul>
    </div>

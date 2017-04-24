@@ -7,6 +7,7 @@
 		<% if review.u_ser_id == current_u_ser.id %>	
 
 			<div class="links btn-group">
+			<li>Sentiment Score is: <%= review.sentiment_score %></li>
 
 			<%= link_to "Edit", edit_book_review_path(review.book, review), class: "btn btn-custom" %>
 			<%= link_to "Delete", book_review_path(review.book, review), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-custom" %>	

@@ -4,12 +4,10 @@ class ReviewsController < ApplicationController
 	before_action :authenticate_u_ser!, only: [:new, :edit]
 
 	def new
-		debugger
 		@review = Review.new
 	end
 
 	def create 
-		debugger
 		@review = Review.new(review_params)	
 		@review.book_id = @book.id
 		@review.u_ser_id = current_u_ser.id
