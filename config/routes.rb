@@ -9,4 +9,7 @@ root 'books#index'
 
 post 'books/search', to: 'books#search'
 
+require 'sidekiq/web'
+mount Sidekiq::Web => "/sidekiq"
+
 end

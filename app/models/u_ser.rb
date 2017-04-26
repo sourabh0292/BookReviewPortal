@@ -8,7 +8,7 @@ class USer < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 def welcome_send
-	WelcomeMailer.welcome_send(self).deliver
+		WelcomeMailer.welcome_send(self).deliver
 end
 
 end
