@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_namse}.git"
 end
 
+gem 'humanizer'
 gem 'sidekiq'
 gem 'actionmailer', '~> 5.0', '>= 5.0.0.1'
 gem 'paperclip', '~> 5.1'
